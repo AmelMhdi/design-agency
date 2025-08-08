@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Design Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- Mobile menu overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    
+    <header>
+        <a href="index.html" class="logo">Design</a>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile menu toggle -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Mobile menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-content">
+        <div class="page-hero">
+            <h1>About Our Agency</h1>
+            <p>We are a passionate team dedicated to creating impactful and beautiful designs.</p>
+        </div>
+
+        <section class="about-section">
+            <div class="about-image">
+                <img src="/images/placeholder.png" alt="Our Creative Team">
+            </div>
+            <div class="about-text">
+                <h2>Our Mission</h2>
+                <p>At Design Agency, our mission is to empower businesses and individuals through exceptional design. We believe that great design is not just about aesthetics, it's about solving problems, communicating effectively, and creating memorable experiences.</p>
+                <p>With years of experience and a keen eye for detail, we work closely with our clients to understand their unique needs and deliver tailored solutions that exceed expectations. From concept to execution, we are committed to excellence and innovation.</p>
+                <h2>Our Values</h2>
+                <ul>
+                    <li>Creativity & Innovation</li>
+                    <li>Client-Centric Approach</li>
+                    <li>Quality & Craftsmanship</li>
+                    <li>Transparency & Integrity</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="/images/placeholder.png" alt="Team Member 1">
+                    <h3>Jane Doe</h3>
+                    <p>Creative Director</p>
+                </div>
+                <div class="team-member">
+                    <img src="/images/placeholder.png" alt="Team Member 2">
+                    <h3>John Smith</h3>
+                    <p>Lead Designer</p>
+                </div>
+                <div class="team-member">
+                    <img src="/images/placeholder.png" alt="Team Member 3">
+                    <h3>Emily White</h3>
+                    <p>UX Specialist</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const body = document.body;
+
+        function toggleMobileMenu() {
+            mobileMenuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            body.classList.toggle('menu-open');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        mobileOverlay.addEventListener('click', toggleMobileMenu);
+
+        const mobileLinks = document.querySelectorAll('.mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMobileMenu);
+        });
+    </script>
+</body>
+</html>
