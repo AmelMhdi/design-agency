@@ -17,7 +17,10 @@ A responsive, modern landing page built with HTML5 and CSS3 (no frameworks) for 
   - Clamp-based typography
   - Smooth transitions
 
-<!-- ## Live Preview -->
+## Live Preview
 
-<!-- TODO -->
-<!-- [Add Link to GitHub Pages](https://yourusername.github.io/project-name) -->
+[The Design Agency](https://design-agency-roan.vercel.app/)
+
+## Screenshot 
+
+![Home](./images/homepage.png)
